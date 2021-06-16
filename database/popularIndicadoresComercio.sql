@@ -14,3 +14,5 @@ SELECT
     codestado,
     volume_de_vendas
 FROM comercio_temp ct;
+
+DROP TABLE comercio_temp;
