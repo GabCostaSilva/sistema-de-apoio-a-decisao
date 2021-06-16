@@ -7,11 +7,11 @@ services:
     restart: always
     volumes:
         - ./csvs:/data
-        - ./data/criacaoDoBanco.sql:/docker-entrypoint-initdb.d/criacaoDoBanco.sql
-        - ./data/criacaoDasTabelasDeDimensao.sql:/docker-entrypoint-initdb.d/criacaoDasTabelasDeDimensao.sql
-        - ./data/popularTabelas.sql:/docker-entrypoint-initdb.d/popularTabelas.sql
-        - ./data/popularIndicadoresComercio.sql:/docker-entrypoint-initdb.d/popularIndicadoresComercio.sql
-        - ./data/popularPagamentosAuxilioEmergencial.sql:/docker-entrypoint-initdb.d/popularPagamentosAuxilioEmergencial.sql
+        - ./database/criacaoDoBanco.sql:/docker-entrypoint-initdb.d/criacaoDoBanco.sql
+        - ./database/criacaoDasTabelasDeDimensao.sql:/docker-entrypoint-initdb.d/criacaoDasTabelasDeDimensao.sql
+        - ./database/popularTabelas.sql:/docker-entrypoint-initdb.d/popularTabelas.sql
+        - ./database/popularIndicadoresComercio.sql:/docker-entrypoint-initdb.d/popularIndicadoresComercio.sql
+        - ./database/popularPagamentosAuxilioEmergencial.sql:/docker-entrypoint-initdb.d/popularPagamentosAuxilioEmergencial.sql
     environment:
       POSTGRES_PASSWORD: example
     ports: 
