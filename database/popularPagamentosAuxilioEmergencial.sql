@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS pagamento_por_municipio;
+
 CREATE TABLE pagamento_por_municipio
 (
     codmunicipio  INTEGER,

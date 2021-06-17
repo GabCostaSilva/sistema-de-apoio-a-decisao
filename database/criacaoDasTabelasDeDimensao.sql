@@ -19,7 +19,7 @@ CREATE TABLE municipio (
 CREATE TABLE indicadoresComercio (
 	codData INTEGER REFERENCES data,
 	codEstado integer REFERENCES estado,
-	volumeVendas REAL NOT NULL,
+	volumeVendas VARCHAR(255) NOT NULL,
 	PRIMARY KEY(codData, codEstado)
 );
 

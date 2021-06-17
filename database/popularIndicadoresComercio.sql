@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS comercio_temp;
+
 create table comercio_temp
 (
     codestado        integer      not null,

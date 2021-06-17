@@ -6,13 +6,9 @@ services:
     image: postgres
     restart: always
     volumes:
-        - ./csvs:/data
-        - ./database/criacaoDoBanco.sql:/docker-entrypoint-initdb.d/criacaoDoBanco.sql
-        - ./database/criacaoDasTabelasDeDimensao.sql:/docker-entrypoint-initdb.d/criacaoDasTabelasDeDimensao.sql
-        - ./database/popularTabelas.sql:/docker-entrypoint-initdb.d/popularTabelas.sql
-        - ./database/popularIndicadoresComercio.sql:/docker-entrypoint-initdb.d/popularIndicadoresComercio.sql
-        - ./database/popularPagamentosAuxilioEmergencial.sql:/docker-entrypoint-initdb.d/popularPagamentosAuxilioEmergencial.sql
+      - ./csvs:/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
     environment:
       POSTGRES_PASSWORD: example
-    ports: 
-        - 5433:5432
+    ports:
+      - 5433:5432
